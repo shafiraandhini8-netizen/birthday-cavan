@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Happy Birthday Cavan 🎂</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #fdf6f0;
+      font-family: "Times New Roman", serif;
+    }
+
+    .Poppins {
+      font-family: "Old English Text MT", "UnifrakturCook", Georgia, serif;
+      font-weight: bold;
+    }
+
+    .cute-font {
+      font-family: "Comic Sans MS", cursive;
+    }
+
+    .letter {
+      background: #f4e4d4;
+      border: 2px solid #b99b7d;
+      box-shadow: 0 12px 25px rgba(80, 50, 40, 0.12);
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      animation: naik 5s linear forwards;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    @keyframes naik {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="min-h-screen w-full flex items-center justify-center px-5">
+
+    <div class="max-w-[650px] w-full text-center">
+
+      <div class="text-6xl mb-6">
+        🎂🎉💗
+      </div>
+
+      <div class="letter rounded-[30px] px-7 py-10 md:px-12">
+
+        <p class="gothic text-4xl text-gray-800 mb-7">
+          Happy Birthday, Cavan!
+        </p>
+
+        <p class="text-gray-700 text-lg leading-8">
+          Semoga semua hal baik yang kamu tunggu
+          akhirnya datang di waktu yang tepat.
+        </p>
+
+        <p class="text-gray-700 text-lg leading-8 mt-5">
+          Jangan lupa bahagia, jangan lupa makan,
+          jangan terlalu banyak mikir,
+          dan jangan lupa kalau kamu punya sahabat
+          yang selalu sayang sama kamu. 🥹💗
+        </p>
+
+        <p class="cute-font text-xl text-pink-700 mt-7">
+          Love you always, Cavan ♡
+        </p>
+
+      </div>
+
+      <p class="cute-font text-gray-400 text-sm mt-7">
+        made with ♡ especially for you
+      </p>
+
+      <a href="halaman1.html" class="inline-block mt-5 text-gray-500 underline text-sm">
+        ↻ Baca dari awal
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <script>
+    const hearts = ["💗", "💕", "💖", "♡", "🌷", "✨"];
+
+    for (let i = 0; i < 20; i++) {
+
+      const heart = document.createElement("div");
+
+      heart.className = "heart";
+
+      heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+        (18 + Math.random() * 15) + "px";
+
+      heart.style.animationDuration =
+        (3 + Math.random() * 3) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(function() {
+        heart.remove();
+      }, 6000);
+    }
+  </script>
+
+</body>
+</html>
